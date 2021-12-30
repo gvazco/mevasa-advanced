@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 //Components
 import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
-import ProyectsSidebar from "../components/ProyectsSidebar/ProyectsSidebar"
+import PortafolioSidebar from "../components/PortafolioSidebar/PortafolioSidebar"
 import Pagination from "../components/Pagination/Pagination"
 
 //Component Styles
@@ -18,15 +18,15 @@ import {
   StyledReadMore,
   Image,
   StyledImg,
-} from "./archive.styles"
+} from "./archivePortafolio.styles"
 
-const archiveProyectos = ({
+const archivePortafolio = ({
   data: { allWpProyecto },
   pageContext: {
     catId,
     catName,
     catUri,
-    categoriasProyectos,
+    categoriasPortafolios,
     numPages,
     currentPage,
   },
@@ -38,51 +38,57 @@ const archiveProyectos = ({
       layout="constrained"
       width={1920}
       height={300}
-      alt="Galeria Image Post"
+      alt="Blog Image Post"
     />
     <Wrapper>
       <BreadCrumb
         parent={{
-          uri: "/galeria/all-proyects",
-          title: "galeria",
+          uri: "/portafolio/all-proyects",
+          title: "portafolio",
         }}
       />
       <ContentWrapper>
-        <ProyectsSidebar
+        <PortafolioSidebar
           catId={catId}
-          categoriasProyectos={categoriasProyectos.edges}
+          categoriasPortafolios={categoriasPortafolios.edges}
         />
         <PageContent>
           <h1 dangerouslySetInnerHTML={{ __html: catName }} />
-          {allWpProyecto.edges.map(proyect => (
-            <article key={proyect.node.id} className="entry-content">
-              {proyect.node.featuredImage !== null ? (
-                <Image>
+          <div className="productos-list">
+            {allWpProyecto.edges.map(proyect => (
+              <article key={proyect.node.id} className="entry-content">
+                {proyect.node.featuredImage !== null ? (
+                  <Image>
+                    <Link to={proyect.node.uri}>
+                      <StyledImg
+                        image={
+                          proyect.node.featuredImage.node.localFile
+                            .childImageSharp.gatsbyImageData
+                        }
+                        alt="Galeria Image"
+                      />
+                    </Link>
+                  </Image>
+                ) : null}
+                <div className="content">
                   <Link to={proyect.node.uri}>
-                    <StyledImg
-                      image={
-                        proyect.node.featuredImage.node.localFile
-                          .childImageSharp.gatsbyImageData
-                      }
-                      alt="Galeria Image"
+                    <StyledH2
+                      dangerouslySetInnerHTML={{ __html: proyect.node.title }}
                     />
                   </Link>
-                </Image>
-              ) : null}
-              <Link to={proyect.node.uri}>
-                <StyledH2
-                  dangerouslySetInnerHTML={{ __html: proyect.node.title }}
-                />
-              </Link>
 
-              <StyledDate
-                dangerouslySetInnerHTML={{ __html: proyect.node.date }}
-              />
-              <p dangerouslySetInnerHTML={{ __html: proyect.node.excerpt }} />
-              <StyledReadMore to={proyect.node.uri}>Leer más...</StyledReadMore>
-              <div className="dot-divider" />
-            </article>
-          ))}
+                  <StyledDate
+                    dangerouslySetInnerHTML={{ __html: proyect.node.date }}
+                  />
+                  <p dangerouslySetInnerHTML={{ __html: proyect.node.excerpt }} />
+                  <StyledReadMore to={proyect.node.uri}>
+                    Leer más...
+                  </StyledReadMore>
+                </div>
+                <div className="dot-divider" />
+              </article>
+            ))}
+          </div>
           <Pagination
             catUri={catUri}
             page={currentPage}
@@ -94,14 +100,14 @@ const archiveProyectos = ({
   </Layout>
 )
 
-export default archiveProyectos
+export default archivePortafolio
 
 export const pageQuery = graphql`
-  query ($catId: String!, $skip: Int!, $limit: Int!) {
+  query($catId: String!, $skip: Int!, $limit: Int!) {
     allWpProyecto(
       sort: { fields: date, order: DESC }
       filter: {
-        categoriasProyectos: { nodes: { elemMatch: { id: { eq: $catId } } } }
+        categoriasPortafolios: { nodes: { elemMatch: { id: { eq: $catId } } } }
       }
       skip: $skip
       limit: $limit

@@ -9,10 +9,10 @@ export const StyledImg = styled(GatsbyImage)`
 
 export const CTAImage = styled.div`
   margin-bottom: 20px;
-  max-height: 100px;
+  max-height: 150px;
   position: relative;
   overflow: hidden;
-  margin: 0 5px;
+  margin: 0;
   img {
     filter: brightness(70%);
     transition: 0.3s ease-in;
@@ -25,7 +25,7 @@ export const CTAImage = styled.div`
   }
 
   @media (min-width: 768px) {
-    max-height: 200px;
+    max-height: 250px;
   }
 `
 
@@ -47,7 +47,7 @@ export const CTAImageText = styled.p`
   font-family: "Teko";
   font-weight: 700;
   letter-spacing: 3px;
-  font-size: 1.3rem;
+  font-size: 1srem;
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
@@ -58,10 +58,10 @@ export const CTAImageText = styled.p`
   }
 
   @media (min-width: 992px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   @media (min-width: 1200px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `

@@ -30,12 +30,12 @@ const PostContent = styled.article`
 const ProyectTemplate = ({ data }) => (
   <Layout>
     <Wrapper>
-      <BreadCrumb parent={{ uri: "/galeria/all-proyects", title: "galería" }} />
+      <BreadCrumb parent={{ uri: "/portafolio/all-proyects", title: "portafolios" }} />
       <ContentWrapper>
         <PostSidebar
           date={data.item.date}
           author={data.item.author.node.name}
-          categories={data.item.categoriasProyectos.nodes}
+          categories={data.item.categoriasPortafolios.nodes}
         />
         <PostContent>
           <h1 dangerouslySetInnerHTML={{ __html: data.item.title }} />
@@ -63,7 +63,7 @@ export const PageQuery = graphql`
         }
       }
       date(formatString: "DD MM YYYY")
-      categoriasProyectos {
+      categoriasPortafolios {
         nodes {
           id
           name

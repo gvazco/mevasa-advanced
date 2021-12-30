@@ -2,9 +2,10 @@ import styled from "styled-components"
 
 export const Credits = styled.div`
   color: #fff;
+  
   background: #0c0c0c;
   text-align: center;
-  padding: 20px 10px 30px 10px;
+  padding: 20px 10px 20px 10px;
   font-family: "Teko", Arial, Helvetica, sans-serif;
 
   a {
@@ -21,20 +22,36 @@ export const StyledH2 = styled.h2`
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Teko", Arial, Helvetica, sans-serif;
+
+  a{
+    color:#000;
+
+    :hover{
+      color:#ff6600;
+    }
+  }
+
+  
 `
 export const Wrapper = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-align: space-between;
-  background: linear-gradient(180deg, #4d4d4d, #0c0c0c);
-  color: #fff;
+  color: #000;
   max-height: 1350px;
   padding: 50px 0;
+  box-shadow: 7px -7px 14px 3px #d1d1d1, 7px 7px 14px 3px #fff;
+  
 
   @media screen and (min-width: 992px) {
       padding: 120px 0;
     }
+
+  .content-wrapper{
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 
   p {
     margin: 0;
@@ -53,7 +70,7 @@ export const Wrapper = styled.footer`
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 25px;
-  text-align: center;
+  text-align: left;
 
   
   li.menu{
@@ -65,12 +82,14 @@ export const Wrapper = styled.footer`
     li > p {
       
     font-size:20px;
-    color:#fff;
+    line-height: 35px;
+    color:#000;
     font-family: 'Teko', Arial, Helvetica, sans-serif;
       a{
-        color:#fff;
+        color:#000;
         :hover {
         color: #f26e3b;
+        line-height: 35px;
         }
       }
     }
@@ -90,11 +109,14 @@ export const Wrapper = styled.footer`
 
     span {
         margin-bottom:20px;
+        font-size:20px;
+        color:#000;
+        font-family: 'Teko', Arial, Helvetica, sans-serif;
       }
 
     
 
     @media screen and (min-width: 768px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 2fr;
     }
 `

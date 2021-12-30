@@ -3,13 +3,14 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  background: #ddd;
-  width: 100%;
+  background: #fff;
+  max-width: 1180px;
+  margin: 0 auto;
   text-align: center;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    text-align: left;
+    text-align: right;
   }
 
   .about-text {
@@ -17,6 +18,7 @@ export const Wrapper = styled.div`
 
     @media screen and (max-width: 768px) {
       padding: 20px;
+      ;
     }
   }
 `

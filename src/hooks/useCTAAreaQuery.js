@@ -11,7 +11,7 @@ export const useCTAAreaQuery = () => {
     }
 
     query CTAQuery {
-      cta: wpPage(databaseId: { eq: 12 }) {
+      cta: wpPage(databaseId: { eq: 1021 }) {
         ACF_HomePage {
           cta1Link
           cta1Text
@@ -19,12 +19,6 @@ export const useCTAAreaQuery = () => {
           cta2Text
           cta3Link
           cta3Text
-          cta4Text
-          cta4Link
-          cta5Text
-          cta5Link
-          cta6Text
-          cta6Link
           cta1Image {
             ...ctaImage
           }
@@ -32,15 +26,6 @@ export const useCTAAreaQuery = () => {
             ...ctaImage
           }
           cta3Image {
-            ...ctaImage
-          }
-          cta4Image {
-            ...ctaImage
-          }
-          cta5Image {
-            ...ctaImage
-          }
-          cta6Image {
             ...ctaImage
           }
         }

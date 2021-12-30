@@ -25,32 +25,23 @@ const ContentWrapper = styled.div`
 const PostContent = styled.article`
   margin-top: 20px;
   max-width: 800px;
-
-  iframe {
-    width: 100%;
-  }
 `
 
-const FichaTemplate = ({ data }) => (
+const ProyectTemplate = ({ data }) => (
   <Layout>
     <Wrapper>
-      <BreadCrumb
-        parent={{
-          uri: "/fichas_tecnicas/all-fichas",
-          title: "fichas técnicas",
-        }}
-      />
+      <BreadCrumb parent={{ uri: "/productos/all-products", title: "productos" }} />
       <ContentWrapper>
         <PostSidebar
-          date={data.ficha.date}
-          author={data.ficha.author.node.name}
-          categories={data.ficha.marcas.nodes}
+          date={data.item.date}
+          author={data.item.author.node.name}
+          categories={data.item.categoriasProductos.nodes}
         />
         <PostContent>
-          <h1 dangerouslySetInnerHTML={{ __html: data.ficha.title }} />
+          <h1 dangerouslySetInnerHTML={{ __html: data.item.title }} />
           <div
             dangerouslySetInnerHTML={{
-              __html: TransformOembedToIframe(data.ficha.content),
+              __html: TransformOembedToIframe(data.item.content),
             }}
           />
         </PostContent>
@@ -59,11 +50,11 @@ const FichaTemplate = ({ data }) => (
   </Layout>
 )
 
-export default FichaTemplate
+export default ProyectTemplate
 
 export const PageQuery = graphql`
   query ($id: String!) {
-    ficha: wpFicha(id: { eq: $id }) {
+    item: wpProducto(id: { eq: $id }) {
       title
       content
       author {
@@ -72,7 +63,7 @@ export const PageQuery = graphql`
         }
       }
       date(formatString: "DD MM YYYY")
-      marcas {
+      categoriasProductos {
         nodes {
           id
           name
