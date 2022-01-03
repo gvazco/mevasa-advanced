@@ -14,7 +14,6 @@ import {
   ContentWrapper,
   PageContent,
   StyledH2,
-  StyledDate,
   StyledReadMore,
   Image,
   StyledImg,
