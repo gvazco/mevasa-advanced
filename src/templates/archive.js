@@ -7,6 +7,8 @@ import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import ArchiveSidebar from "../components/ArchiveSidebar/ArchiveSidebar"
 import Pagination from "../components/Pagination/Pagination"
+import Seo from "../components/SEO/SEO"
+import imageBlog from "../images/remates.jpg"
 
 //Component Styles
 import {
@@ -24,6 +26,11 @@ const archiveTemplate = ({
   pageContext: { catId, catName, catUri, categories, numPages, currentPage },
 }) => (
   <Layout>
+    <Seo 
+      title="Blog de Techos y Mantenimientos | Mevasa"
+		  description="Este es el blog corporativo de Mevasa"
+			image={imageBlog}
+    />
     <StaticImage
       src="../images/archive_headerimage.png"
       placeholder="TRACED_SVG"

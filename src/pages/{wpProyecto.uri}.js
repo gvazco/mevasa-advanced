@@ -5,6 +5,8 @@ import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import PostSidebar from "../components/PostSidebar/PostSidebar"
+import Seo from "../components/SEO/SEO"
+import imageBlog from "../images/remates.jpg"
 //Utils
 import TransformOembedToIframe from "../utils/TransformOembedToIframe"
 
@@ -29,6 +31,11 @@ const PostContent = styled.article`
 
 const ProyectTemplate = ({ data }) => (
   <Layout>
+  <Seo 
+      title={data.item.title}
+		  description={data.item.content}
+			image={imageBlog}
+    />
     <Wrapper>
       <BreadCrumb parent={{ uri: "/portafolio/all-proyects", title: "portafolios" }} />
       <ContentWrapper>

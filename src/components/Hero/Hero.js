@@ -1,5 +1,4 @@
 import React from "react"
-import { getImage } from "gatsby-plugin-image"
 import { useHeroQuery } from "../../hooks/useHeroQuery"
 import {
   Wrapper,
@@ -14,7 +13,7 @@ const Hero = () => {
   return (
     <Wrapper>
       
-      <img src="https://mevasa-gatsby.techosymantenimientos.com.mx/wp-content/uploads/2021/09/ezgif.com-gif-maker.gif" style={{ width: "100%" }} />
+      <img src="https://mevasa-gatsby.techosymantenimientos.com.mx/wp-content/uploads/2021/09/ezgif.com-gif-maker.gif" style={{ width: "100%" }} alt="Hero"/>
 
 
       <HeaderWrapper>

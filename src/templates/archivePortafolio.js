@@ -7,6 +7,8 @@ import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import PortafolioSidebar from "../components/PortafolioSidebar/PortafolioSidebar"
 import Pagination from "../components/Pagination/Pagination"
+import Seo from "../components/SEO/SEO"
+import imageBlog from "../images/remates.jpg"
 
 //Component Styles
 import {
@@ -32,6 +34,11 @@ const archivePortafolio = ({
   },
 }) => (
   <Layout>
+  <Seo 
+      title="Portafolio de Techos y Mantenimientos | Mevasa"
+		  description="Portafolio de proyectos finalizados"
+			image={imageBlog}
+    />
     <StaticImage
       src="../images/archive_headerimage.png"
       placeholder="TRACED_SVG"

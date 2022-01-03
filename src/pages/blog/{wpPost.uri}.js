@@ -5,6 +5,9 @@ import styled from "styled-components"
 import Layout from "../../components/Layout/Layout"
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb"
 import PostSidebar from "../../components/PostSidebar/PostSidebar"
+import Seo from "../../components/SEO/SEO"
+import { GatsbyImage } from "gatsby-plugin-image"
+import imageBlog from "../../images/remates.jpg"
 //Utils
 import TransformOembedToIframe from "../../utils/TransformOembedToIframe"
 
@@ -21,6 +24,31 @@ const ContentWrapper = styled.div`
     display: flex;
   }
 `
+const StyledImg = styled(GatsbyImage)`
+  img {
+    transition: all 0.3s !important;
+  }
+`
+const Image = styled.div`
+  margin-bottom: 20px;
+  width:100%;
+  max-height: 100%;
+  padding:20px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition: 0.3s ease-in;
+  }
+
+  :hover img {
+    transform: scale(1.1);
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+`
 
 const PostContent = styled.article`
   margin-top: 20px;
@@ -33,6 +61,11 @@ const PostContent = styled.article`
 
 const PostTemplate = ({ data }) => (
   <Layout>
+  <Seo 
+      title={data.post.title}
+		  description={data.post.content}
+			image={imageBlog}
+    />
     <Wrapper>
       <BreadCrumb parent={{ uri: "/blog/all-posts", title: "blog" }} />
       <ContentWrapper>
@@ -43,6 +76,15 @@ const PostTemplate = ({ data }) => (
         />
         <PostContent>
           <h1 dangerouslySetInnerHTML={{ __html: data.post.title }} />
+          <Image>    
+            <StyledImg
+              image={
+                data.post.featuredImage.node.localFile.childImageSharp
+                  .gatsbyImageData
+              }
+              alt="Blog Image"
+            />   
+          </Image>
           <div
             dangerouslySetInnerHTML={{
               __html: TransformOembedToIframe(data.post.content),
@@ -64,6 +106,15 @@ export const PageQuery = graphql`
       author {
         node {
           name
+        }
+      }
+      featuredImage {
+        node {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: TRACED_SVG)
+            }
+          }
         }
       }
       date(formatString: "DD MM YYYY")

@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Techos y Mantenimientos`,
-    description: `Comercializadora de lámina y aceros`,
+    description: `Comercializadora de lámina y aceros, somos especialistas en techos y mantenimientos industriales y residenciales`,
     author: `@gvazco`,
-    siteUrl: `https://gvazco.github.io`,
+    image: "./src/images/remates.jpg",
+    url: `https://techosymantenimientos.com.mx`,
+    siteUrl: `https://techosymantenimientos.com.mx`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,13 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -54,6 +50,19 @@ module.exports = {
         display: `swap`,
       },
     },
+    {
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: "UA-193132135-1",
+				head: true,
+			},
+		},
+    {
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				sitemapSize: 5000,
+			},
+		},
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

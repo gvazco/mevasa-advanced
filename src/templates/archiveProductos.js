@@ -7,6 +7,8 @@ import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import ProductosSidebar from "../components/ProductosSidebar/ProductosSidebar"
 import Pagination from "../components/Pagination/Pagination"
+import Seo from "../components/SEO/SEO"
+import imageBlog from "../images/remates.jpg"
 
 //Component Styles
 import {
@@ -14,7 +16,6 @@ import {
   ContentWrapper,
   PageContent,
   StyledH2,
-  StyledDate,
   StyledReadMore,
   Image,
   StyledImg,
@@ -32,6 +33,11 @@ const archiveProductos = ({
   },
 }) => (
   <Layout>
+   <Seo 
+      title="Productos de Techos y Mantenimientos | Mevasa"
+		  description="Catálogo de productos para la construcción"
+			image={imageBlog}
+    />
     <StaticImage
       src="../images/archive_headerimage.png"
       placeholder="TRACED_SVG"
@@ -76,10 +82,6 @@ const archiveProductos = ({
                       dangerouslySetInnerHTML={{ __html: product.node.title }}
                     />
                   </Link>
-
-                  <StyledDate
-                    dangerouslySetInnerHTML={{ __html: product.node.date }}
-                  />
                   <p dangerouslySetInnerHTML={{ __html: product.node.excerpt }} />
                   <StyledReadMore to={product.node.uri}>
                     Leer más...

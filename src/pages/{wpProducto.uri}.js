@@ -6,6 +6,8 @@ import Layout from "../components/Layout/Layout"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import PostSidebar from "../components/PostSidebar/PostSidebar"
 import { GatsbyImage } from "gatsby-plugin-image"
+import Seo from "../components/SEO/SEO"
+
 //Utils
 import TransformOembedToIframe from "../utils/TransformOembedToIframe"
 
@@ -14,16 +16,16 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: 20px;
 `
-export const StyledImg = styled(GatsbyImage)`
+const StyledImg = styled(GatsbyImage)`
   img {
     transition: all 0.3s !important;
   }
 `
-export const Image = styled.div`
+const Image = styled.div`
   margin-bottom: 20px;
   width:100%;
   max-height: 100%;
-  padding:50px;
+  padding:20px;
   position: relative;
   overflow: hidden;
 
@@ -52,6 +54,12 @@ const PostContent = styled.article`
 `
 const ProyectTemplate = ({ data }) => (
   <Layout>
+  <Seo 
+      title={data.item.title}
+		  description={data.item.content}
+			image={data.item.featuredImage.node.localFile.childImageSharp
+                  .gatsbyImageData}
+    />
     <Wrapper>
       <BreadCrumb parent={{ uri: "/productos/all-products", title: "productos" }} />
       <ContentWrapper>
