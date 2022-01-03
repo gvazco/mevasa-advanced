@@ -12,7 +12,7 @@ export const StyledImg = styled(GatsbyImage)`
 export const Image = styled.div`
   margin-bottom: 20px;
   width:100%;
-  max-height: 100px;
+  max-height: 100%;
   position: relative;
   overflow: hidden;
 
@@ -28,7 +28,6 @@ export const Image = styled.div`
   }
 
   @media (min-width: 768px) {
-    max-height: 300px;
     width: 100%;
   }
 `
