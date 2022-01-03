@@ -21,10 +21,12 @@ export const Wrapper = styled.header`
     background: #fff;
     display: flex;
     justify-content: center;
+    align-items:center;
 
     span{
         display: none;
         margin: 0 0 0 5px;
+        
       }
     
 
@@ -34,8 +36,8 @@ export const Wrapper = styled.header`
     }
 
     img{
-      width:20px;
-      margin:0 5px;
+      height:20px;
+      margin:0 8px;
     }
 
     @media screen and (min-width: 768px) {

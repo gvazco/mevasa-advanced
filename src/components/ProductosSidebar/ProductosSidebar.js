@@ -14,7 +14,7 @@ const ProductosSidebar = ({ catId, categoriasProductos }) => {
       <Menu>
         <li className="sidebar-menu-header">
           <img src={PageIcon} alt="Multycasetas - Proyects Header" />
-          <span>Proyectos</span>
+          <span>Productos</span>
         </li>
         {sortedCategories.map(cat => {
           if (cat.node.count !== 0) {

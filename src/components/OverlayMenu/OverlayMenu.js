@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import InvertedLogo from "../../images/logo-multycasetas-bco.png"
+import InvertedLogo from "../../images/gatsby-icon.png"
 import CloseButton from "../../images/tango_close_button.svg"
 import { useMenuQuery } from "../../hooks/useMenuQuery"
 import { Overlay } from "./OverlayMenu.styles"

@@ -44,6 +44,7 @@ const archiveTemplate = ({
         <ArchiveSidebar catId={catId} categories={categories.edges} />
         <PageContent>
           <h1 dangerouslySetInnerHTML={{ __html: catName }} />
+          <div className="productos-list">
           {allWpPost.edges.map(post => (
             <article key={post.node.id} className="entry-content">
               {post.node.featuredImage !== null ? (
@@ -59,22 +60,22 @@ const archiveTemplate = ({
                   </Link>
                 </Image>
               ) : null}
-              <Link to={`/blog${post.node.uri}`}>
-                <StyledH2
-                  dangerouslySetInnerHTML={{ __html: post.node.title }}
-                />
-              </Link>
+              <div className="content">
+                <Link to={`/blog${post.node.uri}`}>
+                  <StyledH2
+                    dangerouslySetInnerHTML={{ __html: post.node.title }}
+                  />
+                </Link>
 
-              <StyledDate
-                dangerouslySetInnerHTML={{ __html: post.node.date }}
-              />
-              <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              <StyledReadMore to={`/blog${post.node.uri}`}>
-                Leer más...
-              </StyledReadMore>
+                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                <StyledReadMore to={`/blog${post.node.uri}`}>
+                  Leer más...
+                </StyledReadMore>
+              </div>
               <div className="dot-divider" />
             </article>
           ))}
+          </div>
           <Pagination
             catUri={catUri}
             page={currentPage}

@@ -18,10 +18,12 @@ export const Overlay = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background:gray;
+    box-shadow: 7px 7px 16px #d1d1d1, -7px -7px 16px #fff;
+    border-bottom: 1px solid #e7e7e7;
     width: 100%;
     height: 100%;
-    color: #fff;
+    color: #000;
     padding: 40px;
 
     .invertedLogo {
