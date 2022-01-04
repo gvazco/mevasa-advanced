@@ -4,12 +4,13 @@ module.exports = {
     description: `Comercializadora de lámina y aceros, somos especialistas en techos y mantenimientos industriales y residenciales`,
     author: `@gvazco`,
     image: "./src/images/remates.jpg",
-    url: `https://techosymantenimientos.com.mx`,
-    siteUrl: `https://techosymantenimientos.com.mx`,
+    url: `https://www.techosymantenimientos.com.mx`,
+    siteUrl: `https://www.techosymantenimientos.com.mx`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -57,7 +58,7 @@ module.exports = {
 				head: true,
 			},
 		},
-    `gatsby-plugin-sitemap`,
+    
 
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
