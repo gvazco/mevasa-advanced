@@ -14,16 +14,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        // Defaults used for gatsbyImageData and StaticImage
-        defaults: {},
-        // Set to false to allow builds to continue on image errors
-        failOnError: true,
-        // deprecated options and their defaults:
-        base64Width: 20,
-        forceBase64Format: `webp`, // valid formats: png,jpg,webp
-        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
-        stripMetadata: true,
-        defaultQuality: 50,
+        defaults: {
+          formats: [`auto`, `webp`],
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+        },
       },
     },
     {
@@ -63,6 +58,7 @@ module.exports = {
 			},
 		},
     `gatsby-plugin-sitemap`,
+
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
