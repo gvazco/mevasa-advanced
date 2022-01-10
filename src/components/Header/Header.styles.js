@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Wrapper = styled.header`
   background-color: white;
   height: 130px;
-  box-shadow: 7px 7px 16px #d1d1d1, -7px -7px 16px #fff;
+  box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #fff;
   border-bottom: 1px solid #e7e7e7;
   position: fixed;
   width: 100%;
@@ -21,28 +21,26 @@ export const Wrapper = styled.header`
     background: #fff;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
-    span{
-        display: none;
-        margin: 0 0 0 5px;
-        
-      }
-    
+    span {
+      display: none;
+      margin: 0 0 0 5px;
+    }
 
     a:hover {
       color: #ff6600;
       cursor: pointer;
     }
 
-    img{
-      height:20px;
-      margin:0 8px;
+    img {
+      height: 20px;
+      margin: 0 8px;
     }
 
     @media screen and (min-width: 768px) {
       justify-content: space-between;
-      span{
+      span {
         display: block;
       }
     }

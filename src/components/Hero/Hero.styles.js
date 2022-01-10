@@ -6,6 +6,7 @@ export const StyledImg = styled(GatsbyImage)`
   max-height: 640px;
   width: 100%;
   filter: brightness(85%);
+  margin-bottom: 20px;
 
   @media (min-width: 1920px) {
     max-height: 640px !important;

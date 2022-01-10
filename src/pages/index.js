@@ -7,7 +7,7 @@ import About from "../components/About/About"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Inicio" />
+    <Seo title="Venta e instalación de lámina y acero" />
     <Hero />
     <About />
     <CTAArea />
