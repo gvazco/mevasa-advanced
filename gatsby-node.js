@@ -7,13 +7,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   createRedirect(
     {
-      fromPath: "/blog",
-      toPath: "/blog/all-posts",
+      fromPath: "/portafolio",
+      toPath: "/portafolios/all-proyects",
       isPermanent: true,
     },
     {
-      fromPath: "/portafolio",
-      toPath: "/portafolios/all-proyects",
+      fromPath: "/blog",
+      toPath: "/blog/all-posts",
       isPermanent: true,
     },
     {
