@@ -3,6 +3,21 @@ const path = require("path")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  const { createRedirect } = actions
+
+  createRedirect(
+    {
+      fromPath: "/blog",
+      toPath: "/blog/all-posts",
+      isPermanent: true,
+    },
+    {
+      fromPath: "/portafolio",
+      toPath: "/portafolios/all-proyects",
+      isPermanent: true,
+    }
+  )
+
   /* ------------------------------------------------------------------- */
   /*                  Extraemos los datos desde Grapql                   */
   /*---------------------------------------------------------------------*/
@@ -154,7 +169,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   })
 
-  
   //Category Products Data
   const { setp, allWpCategoriaProducto } = productos.data
   //Create Pages for each category
@@ -184,6 +198,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     }
   })
-
-
 }

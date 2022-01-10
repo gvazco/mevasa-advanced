@@ -10,6 +10,7 @@
     "gatsby": "^3.13.1",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
+    "gatsby-plugin-client-side-redirect": "^1.1.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-htaccess": "^1.4.0",
