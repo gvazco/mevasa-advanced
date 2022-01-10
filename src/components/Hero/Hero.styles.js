@@ -4,7 +4,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 export const StyledImg = styled(GatsbyImage)`
   max-height: 640px;
-  margin-bottom: 60px;
   width: 100%;
   filter: brightness(85%);
 
@@ -65,7 +64,7 @@ export const HeaderWrapper = styled.div`
     text-transform: none;
     text-align: center;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 350px) {
       display: none;
     }
 

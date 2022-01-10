@@ -2038,7 +2038,7 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^17.0.5":
+"@types/node@*":
   version "17.0.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.7.tgz#4a53d8332bb65a45470a2f9e2611f1ced637a5cb"
   integrity sha512-1QUk+WAUD4t8iR+Oj+UgI8oJa6yyxaB8a8pHaC8uqM6RrS1qbL7bf3Pwl5rHv0psm2CuDErgho6v5N+G+5fwtQ==
@@ -2097,13 +2097,6 @@
   integrity sha512-YyP+VfeaqAyFmXoTh3HChxOQMyjByRMsHU7kc5KOJkSlXudhMhQIALbYV7rHh/l8d2lX3VUQzprrcAgWdRuU8g==
   dependencies:
     "@types/glob" "*"
-    "@types/node" "*"
-
-"@types/sax@^1.2.1":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@types/sax/-/sax-1.2.4.tgz#8221affa7f4f3cb21abd22f244cfabfa63e6a69e"
-  integrity sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==
-  dependencies:
     "@types/node" "*"
 
 "@types/scheduler@*":
@@ -2546,11 +2539,6 @@ arg@^4.1.0:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/arg/-/arg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
   integrity sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==
-
-arg@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.1.tgz#eb0c9a8f77786cad2af8ff2b862899842d7b6adb"
-  integrity sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA==
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -3567,7 +3555,7 @@ commander@^7.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-common-tags@^1.8.0, common-tags@^1.8.2:
+common-tags@^1.8.0:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.2.tgz#94ebb3c076d26032745fd54face7f688ef5ac9c6"
   integrity sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==
@@ -5606,16 +5594,6 @@ gatsby-plugin-sharp@^3.13.0:
     sharp "^0.29.0"
     svgo "1.3.2"
     uuid "3.4.0"
-
-gatsby-plugin-sitemap@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-5.4.0.tgz#7be98e3b8560d1a315315360fcf8c175825b97d8"
-  integrity sha512-Zwbp9BLzhjkxHm5Vvu8Kf1U+okbdVM6M6YVs7pQl3FnOMLZZ8huXHJgRnsjSyEmxENsKeelUttONBcgh38zDLA==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    common-tags "^1.8.2"
-    minimatch "^3.0.4"
-    sitemap "^7.0.0"
 
 gatsby-plugin-styled-components@^4.14.0:
   version "4.14.0"
@@ -10385,16 +10363,6 @@ sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
-
-sitemap@^7.0.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-7.1.0.tgz#300cd8b3fa9d45fb63f9b56d962785c3cd799362"
-  integrity sha512-OctwI2RYFj3Lnoutix0Qhow3AvDoUQ7rsSyzrY8wFKHqXYvmCJXFOBZyVU4/DDtsQ2KnEWY4j4j80hBHBOVEWQ==
-  dependencies:
-    "@types/node" "^17.0.5"
-    "@types/sax" "^1.2.1"
-    arg "^5.0.0"
-    sax "^1.2.4"
 
 slash@^3.0.0:
   version "3.0.0"

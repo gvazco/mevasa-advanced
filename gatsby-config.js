@@ -11,7 +11,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -53,14 +52,12 @@ module.exports = {
       },
     },
     {
-			resolve: `gatsby-plugin-google-analytics`,
-			options: {
-				trackingId: "UA-193132135-1",
-				head: true,
-			},
-		},
-    
-
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-193132135-1",
+        head: true,
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
