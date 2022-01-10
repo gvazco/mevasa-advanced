@@ -7,10 +7,10 @@ import About from "../components/About/About"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Venta e instalación de lámina y acero" />
-    <Hero />
-    <About />
-    <CTAArea />
+    <Seo title="Venta e instalación de lámina y productos derivados del acero | Mevasa" />
+    <Hero data-aos="zoom-in" />
+    <About data-aos="fade-up" />
+    <CTAArea data-aos="fade-up" />
   </Layout>
 )
 

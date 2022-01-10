@@ -7,32 +7,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   createRedirect({
     fromPath: "/portafolio",
-    toPath: "/portafolio/all-proyects",
-    isPermanent: true,
+    toPath: "/portafolios/all-proyects",
+    statusCode: 301,
   })
   createRedirect({
     fromPath: "/blog",
     toPath: "/blog/all-posts",
     statusCode: 301,
   })
-
-  //   createRedirect(
-  //     {
-  //       fromPath: "/portafolio",
-  //       toPath: "/portafolios/all-proyects",
-  //       isPermanent: true,
-  //     },
-  //     {
-  //       fromPath: "/blog",
-  //       toPath: "/blog/all-posts",
-  //       isPermanent: true,
-  //     },
-  //     {
-  //       fromPath: "/productos",
-  //       toPath: "/productos/all-products",
-  //       isPermanent: true,
-  //     }
-  //   )
+  createRedirect({
+    fromPath: "/productos",
+    toPath: "/productos/all-products",
+    statusCode: 301,
+  })
 
   /* ------------------------------------------------------------------- */
   /*                  Extraemos los datos desde Grapql                   */
