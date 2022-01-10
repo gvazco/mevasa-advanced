@@ -15,6 +15,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       fromPath: "/portafolio",
       toPath: "/portafolios/all-proyects",
       isPermanent: true,
+    },
+    {
+      fromPath: "/productos",
+      toPath: "/productos/all-products",
+      isPermanent: true,
     }
   )
 
