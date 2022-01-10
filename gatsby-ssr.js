@@ -9,3 +9,16 @@ export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     ></script>,
   ])
 }
+
+const omitDeep = (collection, excludeKeys) =>
+  _.cloneDeepWith(collection, value => {
+    if (value && typeof value === "object") {
+      for (const key of excludeKeys) {
+        try {
+          delete value[key]
+        } catch (_) {
+          // console.log("ignore", _);
+        }
+      }
+    }
+  })

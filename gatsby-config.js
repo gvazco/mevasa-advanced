@@ -58,6 +58,27 @@ module.exports = {
         head: true,
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-htaccess",
+    //   options: {
+    //     RewriteBase: "/custom/",
+    //     https: true,
+    //     www: true,
+    //     SymLinksIfOwnerMatch: true,
+    //     host: "www.techosymantenimientos.com.mx", // if 'www' is set to 'false', be sure to also remove it here!
+    //     redirect: [
+    //       "RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]",
+    //       {
+    //         from: "/blog",
+    //         to: "/blog/all-posts",
+    //       },
+    //       {
+    //         from: "/portafolio",
+    //         to: "/portafolios/all-proyects",
+    //       },
+    //     ],
+    //   },
+    // },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

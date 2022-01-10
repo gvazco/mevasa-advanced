@@ -1,7 +1,6 @@
 import React from "react"
 import { useHeroQuery } from "../../hooks/useHeroQuery"
 import { getImage } from "gatsby-plugin-image"
-import { StaticImage } from "gatsby-plugin-image"
 import { Wrapper, HeaderWrapper, StyledImg } from "./Hero.styles"
 
 const Hero = () => {
