@@ -35,11 +35,11 @@ const archiveProductos = ({
   <Layout>
     <Seo
       title="Catálogo de productos | Mevasa"
-      description="Catálogo de productos derivados del acero, accesorios y herraientas para la construcción."
+      description="Catálogo de artículos y productos derivados del acero, accesorios de lámina, fijacción, sellado y herramientas profesionales, para la construcción."
       image={imageBlog}
     />
     <StaticImage
-      src="../images/archive_headerimage.png"
+      src="../images/remates.jpg"
       placeholder="TRACED_SVG"
       layout="constrained"
       width={1920}

@@ -3,7 +3,7 @@ module.exports = {
     title: `Techos y Mantenimientos`,
     description: `Comercializadora de lámina y aceros, somos especialistas en techos y mantenimientos industriales y residenciales`,
     author: `@gvazco`,
-    image: "./src/images/remates.jpg",
+    image: "./src/images/GOPR5753-1024x640.jpg",
     url: `https://www.techosymantenimientos.com.mx`,
     siteUrl: `https://www.techosymantenimientos.com.mx`,
   },
@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Teko\:200,400,500,600,700`],
+        fonts: [`Teko\:400,500,600`],
         display: `swap`,
       },
     },

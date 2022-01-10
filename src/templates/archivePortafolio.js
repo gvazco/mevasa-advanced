@@ -8,7 +8,7 @@ import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import PortafolioSidebar from "../components/PortafolioSidebar/PortafolioSidebar"
 import Pagination from "../components/Pagination/Pagination"
 import Seo from "../components/SEO/SEO"
-import imageBlog from "../images/remates.jpg"
+import imageBlog from "../images/GOPR5753-1024x640.jpg"
 
 //Component Styles
 import {
@@ -34,13 +34,13 @@ const archivePortafolio = ({
   },
 }) => (
   <Layout>
-  <Seo 
-      title="Portafolio de Techos y Mantenimientos | Mevasa"
-		  description="Portafolio de proyectos finalizados"
-			image={imageBlog}
+    <Seo
+      title="Portafolio de Proyectos | Mevasa"
+      description="Portafolio profesional de proyectos finalizados, estructuras, bodegas, naves, casetas moduales, techos, cubiertas y mantenimientos industriales y residenciales."
+      image={imageBlog}
     />
     <StaticImage
-      src="../images/archive_headerimage.png"
+      src="../images/remates.jpg"
       placeholder="TRACED_SVG"
       layout="constrained"
       width={1920}
@@ -87,7 +87,9 @@ const archivePortafolio = ({
                   <StyledDate
                     dangerouslySetInnerHTML={{ __html: proyect.node.date }}
                   />
-                  <p dangerouslySetInnerHTML={{ __html: proyect.node.excerpt }} />
+                  <p
+                    dangerouslySetInnerHTML={{ __html: proyect.node.excerpt }}
+                  />
                   <StyledReadMore to={proyect.node.uri}>
                     Leer más...
                   </StyledReadMore>
@@ -110,7 +112,7 @@ const archivePortafolio = ({
 export default archivePortafolio
 
 export const pageQuery = graphql`
-  query($catId: String!, $skip: Int!, $limit: Int!) {
+  query ($catId: String!, $skip: Int!, $limit: Int!) {
     allWpProyecto(
       sort: { fields: date, order: DESC }
       filter: {
