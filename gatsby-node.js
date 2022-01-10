@@ -3,20 +3,26 @@ const path = require("path")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  /* -------------------------------------------------------------------------- */
+  /*                          Side client Redirect 301                          */
+  /* -------------------------------------------------------------------------- */
+
+  /* Activar redirecciones en modo producción y commentar en  modo desarrollo  */
+
   const { createRedirect } = actions
 
   createRedirect({
-    fromPath: "/portafolio",
-    toPath: "/portafolios/all-proyects",
+    fromPath: "/portafolio/",
+    toPath: "/portafolios/all-proyects/",
     statusCode: 301,
   })
   createRedirect({
-    fromPath: "/blog",
+    fromPath: "/blog/",
     toPath: "/blog/all-posts",
     statusCode: 301,
   })
   createRedirect({
-    fromPath: "/productos",
+    fromPath: "/productos/",
     toPath: "/productos/all-products",
     statusCode: 301,
   })
