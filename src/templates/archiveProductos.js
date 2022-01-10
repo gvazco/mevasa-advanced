@@ -33,10 +33,10 @@ const archiveProductos = ({
   },
 }) => (
   <Layout>
-   <Seo 
-      title="Productos de Techos y Mantenimientos | Mevasa"
-		  description="Catálogo de productos para la construcción"
-			image={imageBlog}
+    <Seo
+      title="Catálogo de productos | Mevasa"
+      description="Catálogo de productos derivados del acero, accesorios y herraientas para la construcción."
+      image={imageBlog}
     />
     <StaticImage
       src="../images/archive_headerimage.png"
@@ -82,7 +82,9 @@ const archiveProductos = ({
                       dangerouslySetInnerHTML={{ __html: product.node.title }}
                     />
                   </Link>
-                  <p dangerouslySetInnerHTML={{ __html: product.node.excerpt }} />
+                  <p
+                    dangerouslySetInnerHTML={{ __html: product.node.excerpt }}
+                  />
                   <StyledReadMore to={product.node.uri}>
                     Leer más...
                   </StyledReadMore>
@@ -105,7 +107,7 @@ const archiveProductos = ({
 export default archiveProductos
 
 export const pageQuery = graphql`
-  query($catId: String!, $skip: Int!, $limit: Int!) {
+  query ($catId: String!, $skip: Int!, $limit: Int!) {
     allWpProducto(
       sort: { fields: date, order: DESC }
       filter: {
