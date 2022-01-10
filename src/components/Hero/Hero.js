@@ -1,20 +1,19 @@
 import React from "react"
 import { useHeroQuery } from "../../hooks/useHeroQuery"
-import {
-  Wrapper,
-  HeaderWrapper,
-} from "./Hero.styles"
+import { getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
+import { Wrapper, HeaderWrapper, StyledImg } from "./Hero.styles"
 
 const Hero = () => {
   const {
     wpPage: { ACF_HomePage: data },
   } = useHeroQuery()
 
+  const imageData = getImage(data.heroImage.localFile)
+
   return (
     <Wrapper>
-      
-      <img src="https://mevasa-gatsby.techosymantenimientos.com.mx/wp-content/uploads/2021/09/ezgif.com-gif-maker.gif" style={{ width: "100%" }} alt="Hero"/>
-
+      <StyledImg image={imageData} alt="Hero Image"></StyledImg>
 
       <HeaderWrapper>
         <div>
@@ -27,4 +26,3 @@ const Hero = () => {
 }
 
 export default Hero
-
