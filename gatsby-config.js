@@ -10,7 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-client-side-redirect`,
+
     `gatsby-plugin-image`,
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-transformer-sharp`,
@@ -60,6 +60,7 @@ module.exports = {
         head: true,
       },
     },
+    `gatsby-plugin-client-side-redirect`,
     // {
     //   resolve: "gatsby-plugin-htaccess",
     //   options: {
